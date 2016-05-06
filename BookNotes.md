@@ -68,6 +68,29 @@
  
     （3）many2many会创建一个两个实体表的主键的新的关联表。关联表为两个实体表名加_rel。
     例如：session里定义一个出席者的字段。一个session里可以有多个  Attendees，一个attendee也存在于多个session里，这时就要定义两个表的关联关系表。
-    attendee_ids = fields.Many2many('res.partner', string="Attendees")2
+    attendee_ids = fields.Many2many('res.partner', string="Attendees")
+###5.XML属性必须加引号
+ 属性值必须被引号包围，不过单引号和双引号均可使用。比如一个人的性别，person 标签可以这样写：
+  
+     <person sex="female"> 
+ 	   
+或者这样也可以：
+	    
+	 <person sex='female'>
+	 
+注释：如果属性值本身包含双引号，那么有必要使用单引号包围它，就像这个例子：
+
+      <gangster name='George "Shotgun" Ziegler'>
+      
+ 或者可以使用实体引用
+ 
+    <gangster name="George &quot;Shotgun&quot; Ziegler">
+    
+###6.“形式良好”或“结构良好”的 XML 文档拥有正确的语法。
+     XML 文档必须有根元素
+     XML 文档必须有关闭标签
+     XML 标签对大小写敏感
+     XML 元素必须被正确的嵌套
+     XML 属性必须加引号
         
      
