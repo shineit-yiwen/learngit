@@ -68,6 +68,6 @@
  
     （3）many2many会创建一个两个实体表的主键的新的关联表。关联表为两个实体表名加_rel。
     例如：session里定义一个出席者的字段。一个session里可以有多个  Attendees，一个attendee也存在于多个session里，这时就要定义两个表的关联关系表。
-    attendee_ids = fields.Many2many('res.partner', string="Attendees")
+    attendee_ids = fields.Many2many('res.partner', string="Attendees")2
         
      
